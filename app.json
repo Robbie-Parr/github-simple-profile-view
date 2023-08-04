@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "react-github-simple-profile-view",
+    "slug": "react-github-simple-profile-view",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "react-github-simple-profile-view"
+}
