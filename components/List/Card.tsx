@@ -1,25 +1,26 @@
 import React from 'react';
-import { Image,Text, View } from 'react-native';
+import { Image,Text, TouchableOpacity, View,Linking } from 'react-native';
 
 type Props = {
     name:string,
     avatar_url:string,
-    company:string
+    company:string,
+    html_url:string
 }
 
-const Card = ({name,avatar_url,company}:Props) => {
-    console.log(avatar_url)
+const Card = ({name,avatar_url,company,html_url}:Props) => {
 
     return(
-        <View 
+        <TouchableOpacity 
+            onPress={() => Linking.openURL(html_url)}
             style={{
                 display:'flex',
                 flexDirection:'row',
-                 marginTop:10,
-                 
-                 borderTopRightRadius:10,
-                 borderBottomRightRadius:10,
-                 backgroundColor:"whitesmoke"}}>
+                marginTop:10,
+                borderTopRightRadius:10,
+                borderBottomRightRadius:10,
+                backgroundColor:"whitesmoke"}}
+                >
             
             <View style={{marginRight:10}}>
                 <Image source={{uri:avatar_url}} style={{width:100,height:100}}/>
@@ -28,7 +29,7 @@ const Card = ({name,avatar_url,company}:Props) => {
                 <Text style={{fontSize:40}}>{name}</Text>
                 <Text style={{alignSelf:'center'}}>{company}</Text>
             </View>
-        </View>
+        </TouchableOpacity>
     )
 }
 

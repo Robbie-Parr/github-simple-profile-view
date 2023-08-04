@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React,{useState} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Alert, StyleSheet, Text, View } from 'react-native';
 
 import Form from "./components/Form";
 import List from "./components/List";
@@ -24,9 +24,9 @@ export default function App() {
       res.json().then( result =>
           {
             if(result.name!=null && !found(result)){
-            setList([...list,result])
+              setList([...list,result])
             }
-          console.log(result)
+          
         }
         )
     )
@@ -50,5 +50,3 @@ const styles = StyleSheet.create({
     paddingTop:30,
   },
 });
-
-//gaeron, sophiebits, sebmarkbage, bvaughn

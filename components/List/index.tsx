@@ -8,7 +8,8 @@ type Props = {
         id:string,
         name:string,
         avatar_url:string,
-        company:string
+        company:string,
+        html_url:string
     }]
 }
 
